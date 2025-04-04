@@ -1,3 +1,8 @@
+:root {
+    --primary--color: #f07807;
+    --secunday--color: #f7e5d8;
+}
+
 * {
     padding: 0;
     margin: 0;  
@@ -25,7 +30,18 @@ header {
     top: 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
+}
+
+li {
+    padding: 4 8px ;
+    transition: .5s;
+}
+
+li:hover {
+    background-color: #fbddc1;
+    box-shadow: 0 6px 6px #333;
 }
 
 ul {
@@ -33,15 +49,26 @@ ul {
     justify-content: space-between;
     align-items: center;
     gap: 48px;
-    background-color: blanchedalmond;
+    font-size: 1rem;
+}
+
+.login {
+    height: 48px;
+    width: 120px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--secunday--color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 main {
-    background-color: #fef2e7;
+    background-color: var(--secunday--color);
     height: 500px;
 }
 
 footer {
-    background-color: #f07807;
+    background-color: var(--primary--color);
     height: 526px;
 }
