@@ -1,6 +1,8 @@
 :root {
     --primary--color: #f07807;
     --secunday--color: #f7e5d8;
+    --default-shadow: 0 6px 6px #333;
+    --default-padding: 0 80px;
 }
 
 * {
@@ -19,18 +21,19 @@ ul,ol,li {
 }
 
 body {
-    padding: 0 80px;
+    background-color: var(--secunday--color);
     font-family: "Poppins", sans-serif;
 }
 
 header {
-    position: absolute;
+    position: fixed;
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100vw;
     top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--default-padding);
     
 }
 
@@ -41,10 +44,10 @@ li {
 
 li:hover {
     background-color: #fbddc1;
-    box-shadow: 0 6px 6px #333;
+    box-shadow: var(--default-shadow);
 }
 
-ul {
+menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,6 +61,7 @@ ul {
     border-radius: 12px;
     border: none;
     background-color: var(--secunday--color);
+    box-shadow: var(--default-shadow);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -65,7 +69,25 @@ ul {
 
 main {
     background-color: var(--secunday--color);
-    height: 500px;
+}
+
+section {
+    height: 100vh;
+}
+
+.home {
+    background-color: var(--secunday--color);
+    background-image: url(./img/background.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.cardapio {
+    background-color: plum;
+}
+
+.servicos {
+    background-color: teal;
 }
 
 footer {
